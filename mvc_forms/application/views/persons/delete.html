@@ -1,0 +1,14 @@
+$def with(form)
+<h3>
+    <a href="/persons"><span class="glyphicon glyphicon-file"></span> Persons</a>
+</h3>
+<form name="main" method="POST">
+    $for input in form.inputs:
+        <div class="form-group">
+            <label for="$:input.description">$:input.description</label>
+            $:input.render()
+        </div>
+    <div class="form-group">
+        <input type="submit" value="Delete"/>
+    </div>
+</form>

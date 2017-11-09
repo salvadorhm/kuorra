@@ -1,0 +1,68 @@
+$def with(users, message)
+<h3>
+    <a href="/users">Users</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="username" id="username" value="$users.username" />
+
+    <div class="form-group">
+        <label>Username</label>
+        <input readonly id="un" type="text" class="form-control" name="un" size="30" value="$users.username.split('!')[0]"/>
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input readonly id="name" type="text" class="form-control" name="name" size="30" value="$users.name"/>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input readonly id="password" type="password" class="form-control" name="password" size="30" value="$users.password"/>
+    </div>
+
+    <div class="form-group">
+        <label>Privilege</label>
+        <select readonly name="privilege" id="privilege" class="form-control" value="$users.privilege">
+          <option value=0>Admin</option>
+          <option value=1>Guess</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        <select readonly name="status" id="status" class="form-control" value="$users.status">
+          <option value=0>Disabled</option>
+          <option value=1>Enabled</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>email</label>
+        <input readonly id="email" type="email" class="form-control" name="email" size="30" value="$users.email"/>
+    </div>
+
+    <div class="form-group">
+        <label>Other</label>
+        <input readonly id="other_data" type="text" class="form-control" name="other_data" size="30" value="$users.other_data"/>
+    </div>
+
+    <div class="form-group">
+        <label>Userhash</label>
+        <input readonly id="user_hash" type="text" class="form-control" name="user_hash" size="32" value="$users.user_hash"/>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span>  Delete</button>
+    </div>
+
+</form>
+
+<br>
+<br>
+<br>

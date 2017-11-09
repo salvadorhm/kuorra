@@ -1,0 +1,22 @@
+$def with(table_name, message)
+<h3>
+    <a href="/table_name"><span class="glyphicon glyphicon-file"></span> table_name</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="primary_key" id="primary_key" value="$table_name.primary_key" />
+
+    fields
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

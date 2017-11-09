@@ -1,0 +1,25 @@
+$def with(logs)
+<h3>
+    <a href="/logs">Logs</a>
+</h3>
+<a href="/logs/printer"><span class="glyphicon glyphicon-print"></span>Print version</a>
+
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Username</th>
+        <th>Date</th>
+        <th>IP</th>
+    </thead>
+    <tbody>
+        $for item in logs:
+        <tr>
+            <td><a href='/logs/view/$item.username'>$item.username.split('!')[0]</a></td>
+            <td><a href='/logs/view/$item.username'>$item.access</a></td>
+            <td><a href='/logs/view/$item.username'>$item.ip</a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>

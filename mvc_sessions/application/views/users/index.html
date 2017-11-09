@@ -1,0 +1,45 @@
+$def with(users)
+<h3>
+    <a href="/users">Users</a>
+</h3>
+<a href="/users/printer"><span class="glyphicon glyphicon-print"></span>Print version</a>
+
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>User</th>
+        <th>Username</th>
+        <th>Status</th>
+        <th>Privilege</th>
+        <th>Force change pwd</th>
+        <th>Updated</th>
+        <th>Options</th>
+    </thead>
+    <tbody>
+        $for item in users:
+        <tr>
+            <td><a href='/users/view/$item.username'>$item.name</a></td>
+            <td><a href='/users/view/$item.username'>$item.username.split('!')[0]</a></td>
+            $if item.status == 0:
+                <td>Disabled</td>
+            $else:
+                <td>Enabled</td>
+
+            $if item.privilege == 0:
+                <td>Admin</td>
+            $else:
+                <td>Guess</td>
+
+            $if item.change_pwd == 0:
+                <td>No</td>
+            $else:
+                <td>Yes</td>
+            <td>$item.created</td>
+            <td>
+                <a href='/users/edit/$item.username'><span class="glyphicon glyphicon-pencil"></span></a>
+                <a href='/users/delete/$item.username'><span class="glyphicon glyphicon-trash"></span></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

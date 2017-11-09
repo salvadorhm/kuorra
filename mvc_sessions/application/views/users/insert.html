@@ -1,0 +1,67 @@
+<h3>
+    <a href="/users">Users</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Full name</label>
+        <input required id="name" type="text" class="form-control" name="name" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label>Username</label>
+        <input required id="username" type="text" class="form-control" name="username" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input required id="password" type="password" class="form-control" name="password" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label>Privilege</label>
+        <div class="radio">
+            <label><input type="radio" name="privilege" value=1 checked>Guess</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="privilege" value=0>Admin</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        <div class="radio">
+            <label><input type="radio" name="status" value=0 checked>Disabled</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="status" value=1>Enabled</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>email</label>
+        <input required id="email" type="email" class="form-control" name="email" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label>Other</label>
+        <input required id="other_data" type="text" class="form-control" name="other_data" size="30"/>
+    </div>
+
+    <div class="form-group">
+        <label>Force change password</label>
+        <div class="radio">
+            <label><input type="radio" name="change_pwd" value=0 checked>No</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="change_pwd" value=1>Yes</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-save"></span> Save</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

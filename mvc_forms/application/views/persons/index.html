@@ -1,0 +1,20 @@
+$def with(result)
+<h1>Index</h1>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+
+    <tbody>
+        $for row in result:
+            <tr>
+                <td><a href="/view/$row.id_person" >$row.name</a></td>
+                <td><a href="/update/$row.id_person" >Update</a></td>
+                <td><a href="/delete/$row.id_person" >Delete</a></td>
+            </tr>
+    </tbody>
+</table>
+<br>
+<br>

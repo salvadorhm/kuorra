@@ -1,0 +1,22 @@
+$def with(message)
+$var privilege: -1
+
+<h1>Login</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+            <label>Username:</label>
+            <input required id="username" type="text" class="form-control" name="username" size="30"/>
+    </div>
+    <div class="form-group">
+            <label>Password:</label>
+            <input required id="password" type="password" class="form-control" name="password" size="30"/>
+    </div>
+    <div class="form-group">
+            <label></label>
+            <button id="Login" name="Login" class="form-control"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+    </div>
+</form>
+$if message != None:
+    <div class="alert alert-danger">
+        <strong>Error:</strong> $message
+    </div>
