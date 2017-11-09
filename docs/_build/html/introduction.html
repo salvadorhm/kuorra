@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>&lt;no title&gt; &#8212; kuorra 0.7.2 documentation</title>
+    <title>kuorra &#8212; kuorra 0.7.2 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -38,148 +38,229 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># kuorra</p>
-<p>## Introduction</p>
-<p>Kuorra is a WebApp Model, it’s based on MVC Pattern, and use Web.py like Microframework.</p>
-<p>Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.</p>
+  <div class="section" id="kuorra">
+<h1>kuorra<a class="headerlink" href="#kuorra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Kuorra is a WebApp Model, it’s based on MVC Pattern, and use Web.py like
+Microframework.</p>
+<p>Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and
+Heroku App.</p>
+</div>
 <hr class="docutils" />
-<p>## Kuorra Model</p>
-<p>![Alt text](images/kuorra.svg?raw=true “Kuorra model”)</p>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">*</span></a></p>
-<p>## Install Kuorra</p>
+<div class="section" id="kuorra-model">
+<h2>Kuorra Model<a class="headerlink" href="#kuorra-model" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id1">
+<img alt="Kuorra model" src="_images/kuorra.svg" /><p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="install-kuorra">
+<h2>Install Kuorra<a class="headerlink" href="#install-kuorra" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>In a terminal write <strong>python -m pip install kuorra</strong>, this download all requirements packages.</li>
+<li>In a terminal write <strong>python -m pip install kuorra</strong>, this download
+all requirements packages.</li>
 </ul>
-<p>![Alt text](images/install_kuorra.png?raw=true “Kuorra model”)</p>
+<div class="figure" id="id2">
+<img alt="Kuorra model" src="images/install_kuorra.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
 <li>When finish you can use kuorra</li>
 </ul>
-<p>![Alt text](images/kuorra_installed.png?raw=true “Kuorra model”)</p>
+<div class="figure" id="id3">
+<img alt="Kuorra model" src="_images/kuorra_installed.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
 <hr class="docutils" />
-<p>## Upgrade Kuorra</p>
+<div class="section" id="upgrade-kuorra">
+<h2>Upgrade Kuorra<a class="headerlink" href="#upgrade-kuorra" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>In a terminal write <strong>python -m pip install kuorra —upgrade</strong>, this update all requirements packages.</li>
+<li>In a terminal write <strong>python -m pip install kuorra —upgrade</strong>, this
+update all requirements packages.</li>
 </ul>
-<p>![Alt text](images/kuorra_upgrade.png?raw=true “Kuorra model”)</p>
+<div class="figure" id="id4">
+<img alt="Kuorra model" src="_images/kuorra_upgrade.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
 <hr class="docutils" />
-<p>## Functions</p>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Script for create a demo DB.</li>
 <li>Config one DB conection.</li>
-<li>Create a products <strong>Controller</strong>.<ul>
+<li>Create a products <strong>Controller</strong>.</li>
 <li><em>Index</em> <strong>[index.py]</strong></li>
 <li><em>View</em> <strong>[view.py]</strong></li>
 <li><em>Edit</em> <strong>[edit.py]</strong></li>
 <li><em>Delete</em> <strong>[delete.py]</strong></li>
 <li><em>Insert</em> <strong>[insert.py]</strong></li>
-</ul>
-</li>
-<li>Create a products <strong>Model</strong>. <strong>[model_products.py]</strong><ul>
+<li>Create a products <strong>Model</strong>. <strong>[model_products.py]</strong></li>
 <li><em>get_all_products</em></li>
 <li><em>get_products</em></li>
 <li><em>delete_products</em></li>
 <li><em>insert_products</em></li>
 <li><em>edit_products</em></li>
-</ul>
-</li>
-<li>Create a products <strong>Views</strong>:<ul>
+<li>Create a products <strong>Views</strong>:</li>
 <li><em>Index</em> <strong>[index.html]</strong></li>
 <li><em>View</em> <strong>[view.html]</strong></li>
 <li><em>Edit</em> <strong>[edit.html]</strong></li>
 <li><em>Delete</em> <strong>[delete.html]</strong></li>
 <li><em>Insert</em> <strong>[insert.html]</strong></li>
 <li><em>Master</em> <strong>[master.html]</strong> Web Template</li>
-</ul>
-</li>
-<li>Create a products <strong>API</strong>. <strong>[api_products.py]</strong><ul>
+<li>Create a products <strong>API</strong>. <strong>[api_products.py]</strong></li>
 <li><em>GET all products</em> (GET)</li>
 <li><em>GET one product</em> (GET id)</li>
 <li><em>INSERT one product</em> (PUT id, fields)</li>
 <li><em>DELETE one product</em> (DELETE id)</li>
 <li><em>UPDATE one product</em> (UPDATE id, fields)</li>
 </ul>
-</li>
-</ul>
 <ol class="arabic simple" start="7">
 <li>Active a SSL connection</li>
 </ol>
-<p>## Create new project</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="how-to-use-kuorra">
+<h1>How to Use Kuorra<a class="headerlink" href="#how-to-use-kuorra" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-new-project">
+<h2>Create new project<a class="headerlink" href="#create-new-project" title="Permalink to this headline">¶</a></h2>
 <p><strong>kuorra new project_name</strong></p>
-<p>![Alt text](images/kuorra_new.png?raw=true “kuorra new”)</p>
+<div class="figure" id="id5">
+<img alt="kuorra new" src="images/kuorra_new.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
 <li>Acme Store MVC Skeleton</li>
 </ul>
-<p>![Alt text](images/vs_code.png?raw=true “vs code”)</p>
+<div class="figure" id="id6">
+<img alt="vs code" src="images/vs_code.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
 <hr class="docutils" />
-<p>## Config new project</p>
+<div class="section" id="config-new-project">
+<h2>Config new project<a class="headerlink" href="#config-new-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>The new project have a demo database  called <strong>acme_store_mvc</strong>, with a products table.</li>
+<li>The new project have a demo database called <strong>acme_store_mvc</strong>,
+with a products table.</li>
 <li>The database script is written in the file <strong>data + schema.sql</strong>.</li>
 </ul>
-<p>![Alt text](images/schme.png?raw=true “schema”)</p>
+<div class="figure" id="id7">
+<img alt="schema" src="images/schme.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
-<li>Connect to MySQL server using <em>mysql cli</em>, <em>mysql workbench</em> or any other application.</li>
+<li>Connect to MySQL server using <em>mysql cli</em>, <em>mysql workbench</em> or any
+other application.</li>
 </ul>
-<p>![Alt text](images/mysql_0.png?raw=true “mysql cli”)</p>
+<div class="figure" id="id8">
+<img alt="mysql cli" src="images/mysql_0.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
 <li>Execute the script <strong>schema.sql</strong> for create the DB.</li>
 </ul>
-<p>![Alt text](images/mysql_1.png?raw=true “source schema.sql”)</p>
+<div class="figure" id="id9">
+<img alt="source schema.sql" src="images/mysql_1.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
 <li>Products table</li>
 </ul>
-<p>![Alt text](images/products.png?raw=true “Products table”)</p>
+<div class="figure" id="id10">
+<img alt="Products table" src="images/products.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
-<li>In the file <strong>application + models + model_products.py</strong> modify the connection parameters<ul>
+<li>In the file <strong>application + models + model_products.py</strong> modify the
+connection parameters</li>
 <li><strong>db_host</strong> = ‘localhost’</li>
 <li><strong>db_name</strong> = ‘acme_store_mvc’</li>
 <li><strong>db_user</strong> = ‘your user name’</li>
 <li><strong>db_pw</strong> = ‘your password’</li>
 </ul>
-</li>
-</ul>
-<p>![Alt text](images/config.png?raw=true “Config”)</p>
+<div class="figure" id="id11">
+<img alt="Config" src="images/config.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
 <hr class="docutils" />
-<p>## Deploy project</p>
+<div class="section" id="deploy-project">
+<h2>Deploy project<a class="headerlink" href="#deploy-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Into de folder where is the <strong>app.py</strong> file execute <strong>kuorra dep</strong> for deploy de WebApp.</li>
+<li>Into de folder where is the <strong>app.py</strong> file execute <strong>kuorra dep</strong>
+for deploy de WebApp.</li>
 </ul>
 <p><strong>kuorra dep</strong></p>
-<p>![Alt text](images/kuorra_dep.png?raw=true “kuorra dep”)</p>
+<div class="figure" id="id12">
+<img alt="kuorra dep" src="images/kuorra_dep.png?raw=true" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <ul class="simple">
 <li>For stop de server press <strong>Ctrl + C</strong>.</li>
 </ul>
-<p>![Alt text](images/kuorra_stop.png?raw=true “Stop”)</p>
+<div class="figure" id="id13">
+<img alt="Stop" src="_images/kuorra_stop.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
+</div>
 <hr class="docutils" />
-<p>## Acme store Demo</p>
+<div class="section" id="acme-store-demo">
+<h2>Acme store Demo<a class="headerlink" href="#acme-store-demo" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://localhost:8080/">https://localhost:8080/</a></li>
 </ul>
-<p>![Alt text](images/kuorra_index.png?raw=true “index.html”)</p>
+<div class="figure" id="id14">
+<img alt="index.html" src="_images/kuorra_index.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <hr class="docutils" />
 <ul class="simple">
 <li><a class="reference external" href="https://localhost:8080/products/view/1">https://localhost:8080/products/view/1</a></li>
 </ul>
-<p>![Alt text](images/kuorra_view.png?raw=true “view.html”)</p>
+<div class="figure" id="id15">
+<img alt="view.html" src="_images/kuorra_view.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <hr class="docutils" />
 <ul class="simple">
 <li><a class="reference external" href="https://localhost:8080/products/insert">https://localhost:8080/products/insert</a></li>
 </ul>
-<p>![Alt text](images/kuorra_insert.png?raw=true “insert.html”)</p>
+<div class="figure" id="id16">
+<img alt="insert.html" src="_images/kuorra_insert.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <hr class="docutils" />
 <ul class="simple">
 <li><a class="reference external" href="https://localhost:8080/products/delete/1">https://localhost:8080/products/delete/1</a></li>
 </ul>
-<p>![Alt text](images/kuorra_delete.png?raw=true “delete.html”)</p>
+<div class="figure" id="id17">
+<img alt="delete.html" src="_images/kuorra_delete.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <hr class="docutils" />
 <ul class="simple">
 <li><a class="reference external" href="https://localhost:8080/products/edit/1">https://localhost:8080/products/edit/1</a></li>
 </ul>
-<p>![Alt text](images/kuorra_edit.png?raw=true “edit.html”)</p>
+<div class="figure" id="id18">
+<img alt="edit.html" src="_images/kuorra_edit.png" />
+<p class="caption"><span class="caption-text">Alt text</span></p>
+</div>
 <hr class="docutils" />
-<p>##### Author Salvador Hernández Mendoza
-##### Email <a class="reference external" href="mailto:salvadorhm&#37;&#52;&#48;gmail&#46;com">salvadorhm<span>&#64;</span>gmail<span>&#46;</span>com</a>
-##### Twitter &#64;salvadorhm</p>
+<div class="section" id="author-salvador-hernandez-mendoza">
+<h3>Author Salvador Hernández Mendoza<a class="headerlink" href="#author-salvador-hernandez-mendoza" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="email-salvadorhm-gmail-com">
+<h3>Email <a class="reference external" href="mailto:salvadorhm&#37;&#52;&#48;gmail&#46;com">salvadorhm<span>&#64;</span>gmail<span>&#46;</span>com</a><a class="headerlink" href="#email-salvadorhm-gmail-com" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="twitter-salvadorhm">
+<h3>Twitter &#64;salvadorhm<a class="headerlink" href="#twitter-salvadorhm" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
 
 
           </div>

@@ -1,174 +1,252 @@
-# kuorra
+kuorra
+======
 
-## Introduction
+Introduction
+------------
 
+Kuorra is a WebApp Model, it's based on MVC Pattern, and use Web.py like
+Microframework.
 
-Kuorra is a WebApp Model, it's based on MVC Pattern, and use Web.py like Microframework.
+Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and
+Heroku App.
 
-Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
+--------------
 
-****
+Kuorra Model
+------------
 
-## Kuorra Model
+.. figure:: images/kuorra.svg
+   :alt: Kuorra model
 
-![Alt text](images/kuorra.svg?raw=true "Kuorra model")
+   Alt text
 
-***
+--------------
 
-## Install Kuorra
+Install Kuorra
+--------------
 
-+ In a terminal write **python -m pip install kuorra**, this download all requirements packages.
+-  In a terminal write **python -m pip install kuorra**, this download
+   all requirements packages.
 
-![Alt text](images/install_kuorra.png?raw=true "Kuorra model")
+.. figure:: images/install_kuorra.png
+   :alt: Kuorra model
 
-+ When finish you can use kuorra
+   Alt text
 
-![Alt text](images/kuorra_installed.png?raw=true "Kuorra model")
+-  When finish you can use kuorra
 
+.. figure:: images/kuorra_installed.png
+   :alt: Kuorra model
 
-****
+   Alt text
 
-## Upgrade Kuorra
+--------------
 
-+ In a terminal write **python -m pip install kuorra ---upgrade**, this update all requirements packages.
+Upgrade Kuorra
+--------------
 
-![Alt text](images/kuorra_upgrade.png?raw=true "Kuorra model")
+-  In a terminal write **python -m pip install kuorra ---upgrade**, this
+   update all requirements packages.
 
-****
+.. figure:: images/kuorra_upgrade.png
+   :alt: Kuorra model
 
-## Functions
+   Alt text
 
-+ Script for create a demo DB.
+--------------
 
-+ Config one DB conection.
+Functions
+---------
 
-+ Create a products **Controller**.
+-  Script for create a demo DB.
 
-  - *Index* **[index.py]**
-  - *View* **[view.py]**
-  - *Edit* **[edit.py]**
-  - *Delete* **[delete.py]**
-  - *Insert* **[insert.py]**
+-  Config one DB conection.
 
-+ Create a products **Model**. **[model_products.py]**
+-  Create a products **Controller**.
 
-  - *get_all_products*
-  - *get_products*
-  - *delete_products*
-  - *insert_products*
-  - *edit_products*
+-  *Index* **[index.py]**
+-  *View* **[view.py]**
+-  *Edit* **[edit.py]**
+-  *Delete* **[delete.py]**
+-  *Insert* **[insert.py]**
 
-+ Create a products **Views**:
+-  Create a products **Model**. **[model\_products.py]**
 
-  - *Index* **[index.html]**
-  - *View* **[view.html]**
-  - *Edit* **[edit.html]**
-  - *Delete* **[delete.html]**
-  - *Insert* **[insert.html]**
-  - *Master* **[master.html]** Web Template
+-  *get\_all\_products*
+-  *get\_products*
+-  *delete\_products*
+-  *insert\_products*
+-  *edit\_products*
 
-+ Create a products **API**. **[api_products.py]**
+-  Create a products **Views**:
 
-  - *GET all products* (GET)
-  - *GET one product* (GET id)
-  - *INSERT one product* (PUT id, fields)
-  - *DELETE one product* (DELETE id)
-  - *UPDATE one product* (UPDATE id, fields)
+-  *Index* **[index.html]**
+-  *View* **[view.html]**
+-  *Edit* **[edit.html]**
+-  *Delete* **[delete.html]**
+-  *Insert* **[insert.html]**
+-  *Master* **[master.html]** Web Template
+
+-  Create a products **API**. **[api\_products.py]**
+
+-  *GET all products* (GET)
+-  *GET one product* (GET id)
+-  *INSERT one product* (PUT id, fields)
+-  *DELETE one product* (DELETE id)
+-  *UPDATE one product* (UPDATE id, fields)
 
 7. Active a SSL connection
 
-****
-# How to Use Kuorra
+--------------
 
-## Create new project
+How to Use Kuorra
+=================
 
-**kuorra new project_name**
+Create new project
+------------------
 
-![Alt text](images/kuorra_new.png?raw=true "kuorra new")
+**kuorra new project\_name**
 
-+ Acme Store MVC Skeleton
+.. figure:: images/kuorra_new.png?raw=true
+   :alt: kuorra new
 
-![Alt text](images/vs_code.png?raw=true "vs code")
+   Alt text
 
-****
+-  Acme Store MVC Skeleton
 
-## Config new project
+.. figure:: images/vs_code.png?raw=true
+   :alt: vs code
 
-+ The new project have a demo database  called **acme_store_mvc**, with a products table.
+   Alt text
 
-+ The database script is written in the file **data + schema.sql**.
+--------------
 
-![Alt text](images/schme.png?raw=true "schema")
+Config new project
+------------------
 
-+ Connect to MySQL server using *mysql cli*, *mysql workbench* or any other application.
+-  The new project have a demo database called **acme\_store\_mvc**,
+   with a products table.
 
-![Alt text](images/mysql_0.png?raw=true "mysql cli")
+-  The database script is written in the file **data + schema.sql**.
 
-+ Execute the script **schema.sql** for create the DB.
+.. figure:: images/schme.png?raw=true
+   :alt: schema
 
-![Alt text](images/mysql_1.png?raw=true "source schema.sql")
+   Alt text
 
-+ Products table
+-  Connect to MySQL server using *mysql cli*, *mysql workbench* or any
+   other application.
 
-![Alt text](images/products.png?raw=true "Products table")
+.. figure:: images/mysql_0.png?raw=true
+   :alt: mysql cli
 
-+ In the file **application + models + model_products.py** modify the connection parameters
+   Alt text
 
-  - **db_host** = 'localhost'
-  - **db_name** = 'acme_store_mvc'
-  - **db_user** = 'your user name'
-  - **db_pw** = 'your password'
+-  Execute the script **schema.sql** for create the DB.
 
-![Alt text](images/config.png?raw=true "Config")
+.. figure:: images/mysql_1.png?raw=true
+   :alt: source schema.sql
 
-****
+   Alt text
 
-## Deploy project
+-  Products table
 
-+ Into de folder where is the **app.py** file execute **kuorra dep** for deploy de WebApp.
+.. figure:: images/products.png?raw=true
+   :alt: Products table
+
+   Alt text
+
+-  In the file **application + models + model\_products.py** modify the
+   connection parameters
+
+-  **db\_host** = 'localhost'
+-  **db\_name** = 'acme\_store\_mvc'
+-  **db\_user** = 'your user name'
+-  **db\_pw** = 'your password'
+
+.. figure:: images/config.png?raw=true
+   :alt: Config
+
+   Alt text
+
+--------------
+
+Deploy project
+--------------
+
+-  Into de folder where is the **app.py** file execute **kuorra dep**
+   for deploy de WebApp.
 
 **kuorra dep**
 
-![Alt text](images/kuorra_dep.png?raw=true "kuorra dep")
+.. figure:: images/kuorra_dep.png?raw=true
+   :alt: kuorra dep
 
-+ For stop de server press **Ctrl + C**.
+   Alt text
 
-![Alt text](images/kuorra_stop.png?raw=true "Stop")
+-  For stop de server press **Ctrl + C**.
 
-****
+.. figure:: images/kuorra_stop.png
+   :alt: Stop
 
-## Acme store Demo
+   Alt text
 
-+ https://localhost:8080/
+--------------
 
-![Alt text](images/kuorra_index.png?raw=true "index.html")
+Acme store Demo
+---------------
 
-****
+-  https://localhost:8080/
 
-+ https://localhost:8080/products/view/1
+.. figure:: images/kuorra_index.png
+   :alt: index.html
 
-![Alt text](images/kuorra_view.png?raw=true "view.html")
+   Alt text
 
-****
+--------------
 
-+ https://localhost:8080/products/insert
+-  https://localhost:8080/products/view/1
 
-![Alt text](images/kuorra_insert.png?raw=true "insert.html")
+.. figure:: images/kuorra_view.png
+   :alt: view.html
 
-****
+   Alt text
 
-+ https://localhost:8080/products/delete/1
+--------------
 
-![Alt text](images/kuorra_delete.png?raw=true "delete.html")
+-  https://localhost:8080/products/insert
 
-****
+.. figure:: images/kuorra_insert.png
+   :alt: insert.html
 
-+ https://localhost:8080/products/edit/1
+   Alt text
 
-![Alt text](images/kuorra_edit.png?raw=true "edit.html")
+--------------
 
-****
+-  https://localhost:8080/products/delete/1
 
-##### Author Salvador Hernández Mendoza
-##### Email salvadorhm@gmail.com
-##### Twitter @salvadorhm
+.. figure:: images/kuorra_delete.png
+   :alt: delete.html
+
+   Alt text
+
+--------------
+
+-  https://localhost:8080/products/edit/1
+
+.. figure:: images/kuorra_edit.png
+   :alt: edit.html
+
+   Alt text
+
+--------------
+
+Author Salvador Hernández Mendoza
+'''''''''''''''''''''''''''''''''
+
+Email salvadorhm@gmail.com
+''''''''''''''''''''''''''
+
+Twitter @salvadorhm
+'''''''''''''''''''
+
