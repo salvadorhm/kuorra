@@ -1,0 +1,40 @@
+$def with(product)
+<h3>
+    <a href="/products"><span class="glyphicon glyphicon-file"></span> Product</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_product" id="id_product" value="$product.id_product" />
+    <div class="form-group">
+        <label>Product:</label>
+        <input required id="product" type="text" class="form-control" name="product" size="30" value="$product.product" />
+    </div>
+    <div class="form-group">
+        <label>Stock:</label>
+        <input required id="stock" type="text" class="form-control" name="stock" size="30" value="$product.stock" />
+    </div>
+    <div class="form-group">
+        <label>Description:</label>
+        <input required id="description" type="text" class="form-control" name="description" size="30" value="$product.description"
+        />
+    </div>
+    <div class="form-group">
+        <label>Purchase price:</label>
+        <input required id="purchase_price" type="text" class="form-control" name="purchase_price" size="30" value="$product.purchase_price"
+        />
+    </div>
+    <div class="form-group">
+        <label>Price sale:</label>
+        <input required id="price_sale" type="text" class="form-control" name="price_sale" size="30" value="$product.price_sale"
+        />
+    </div>
+    <div class="form-group">
+        <label>Product Image</label>
+        <input required id="product_image" type="file" class="form-control" name="product_image" />
+    </div>
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control">Edit</button>
+    </div>
+</form>
+<br>
+<br>

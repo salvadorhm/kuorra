@@ -1,0 +1,21 @@
+$def with(products)
+<h3>
+    <a href="/products"><span class="glyphicon glyphicon-file"></span> Product</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Product</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in products:
+        <tr>
+            <td><a href='/products/view/$item.id_product'>$item.product</a></td>
+            <td><a href='/products/edit/$item.id_product'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/products/delete/$item.id_product'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
