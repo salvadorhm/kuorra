@@ -11,7 +11,7 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 ## Kuorra Model
 
-![Alt text](images/kuorra.svg?raw=true "Kuorra model")
+![Alt text](images/kuorra.png?raw=true "Kuorra model")
 
 ***
 
