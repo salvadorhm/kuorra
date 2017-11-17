@@ -2,6 +2,9 @@ import config
 
 class Update:
 
+    def __init__(self):
+        pass
+
     def GET(self, id_person):
         persons = config.form_persons()
         result = config.model.get_persons(id_person)

@@ -2,6 +2,9 @@ import config
 
 class Insert:
 
+    def __init__(self):
+        pass
+
     def GET(self):
         persons = config.form_persons()
         return config.render.insert(persons)

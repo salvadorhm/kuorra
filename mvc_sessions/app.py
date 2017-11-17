@@ -31,8 +31,6 @@ if ssl is True:
     CherryPyWSGIServer.ssl_certificate = "ssl/server.crt"
     CherryPyWSGIServer.ssl_private_key = "ssl/server.key"
 
-store = web.session.DiskStore('sessions')
-
 if web.config.get('_session') is None:
     db = config.db
     store = web.session.DBStore(db, 'sessions')
@@ -58,22 +56,22 @@ else:
     session = web.config._session
 
 
-class count:
+class Count:
     def GET(self):
         session.count += 1
         return str(session.count)
 
 
-def internalerror():
+def InternalError():
     raise config.web.seeother('/')
 
 
-def notfound():
+def NotFound():
     raise config.web.seeother('/')
 
 if __name__ == "__main__":
     web.config.debug = False
     web.config.db_printing = False
-    app.internalerror = internalerror
-    app.notfound = notfound
+    app.internalerror = InternalError
+    app.notfound = NotFound
     app.run()

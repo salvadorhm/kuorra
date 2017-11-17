@@ -29,10 +29,11 @@ def delete_persons(id_person):
 
 def insert_persons(id_person,name,telephone,email):
     try:
-        db.insert('persons',id_person=id_person,
-name=name,
-telephone=telephone,
-email=email)
+        return db.insert('persons',
+                id_person=id_person,
+                name=name,
+                telephone=telephone,
+                email=email)
     except Exception as e:
         print "Model insert Error {}".format(e.args)
         print "Model insert Message {}".format(e.message)
@@ -40,12 +41,13 @@ email=email)
 
 def update_persons(id_person,name,telephone,email):
     try:
-        db.update('persons',id_person=id_person,
-name=name,
-telephone=telephone,
-email=email,
-                  where='id_person=$id_person',
-                  vars=locals())
+        return db.update('persons',
+                id_person=id_person,
+                name=name,
+                telephone=telephone,
+                email=email,
+                where='id_person=$id_person',
+                vars=locals())
     except Exception as e:
         print "Model update Error {}".format(e.args)
         print "Model updateMessage {}".format(e.message)

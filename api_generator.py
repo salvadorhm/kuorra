@@ -6,8 +6,8 @@ class Api_generator:
 
     db_host = 'localhost'
     db_name = 'acme_store'
-    db_user = 'root'
-    db_pw = 'toor'
+    db_user = ''
+    db_pw = ''
 
     table_name = ''
 

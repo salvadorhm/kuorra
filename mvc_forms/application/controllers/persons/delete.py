@@ -1,6 +1,9 @@
 import config
 
 class Delete:
+    
+    def __init__(self):
+        pass
 
     def GET(self, id_person):
         persons = config.form_persons()
