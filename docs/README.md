@@ -11,7 +11,7 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 ## Kuorra Model
 
-![Alt text](images/kuorra.svg?raw=true "Kuorra model")
+![Alt text](images/kuorra.png?raw=true "Kuorra model")
 
 ***
 
@@ -19,11 +19,9 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 + In a terminal write **python -m pip install kuorra**, this download all requirements packages.
 
-![Alt text](images/install_kuorra.png?raw=true "Kuorra model")
+![Alt text](images/install_kourra.png?raw=true "Install Kuorra")
 
-+ When finish you can use kuorra
-
-![Alt text](images/kuorra_installed.png?raw=true "Kuorra model")
+![Alt text](images/kuorra_installed.png?raw=true "Kuorra installed")
 
 
 ****
@@ -32,7 +30,7 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 + In a terminal write **python -m pip install kuorra ---upgrade**, this update all requirements packages.
 
-![Alt text](images/kuorra_upgrade.png?raw=true "Kuorra model")
+![Alt text](images/kuorra_upgrade.png?raw=true "Kuorra upgrade")
 
 ****
 
@@ -88,7 +86,7 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 + Acme Store MVC Skeleton
 
-![Alt text](images/vs_code.png?raw=true "vs code")
+![Alt text](images/vs_code.png?raw=true "VS code")
 
 ****
 
@@ -98,11 +96,11 @@ Use Kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
 + The database script is written in the file **data + schema.sql**.
 
-![Alt text](images/schme.png?raw=true "schema")
+![Alt text](images/schme.png?raw=true "Schema")
 
 + Connect to MySQL server using *mysql cli*, *mysql workbench* or any other application.
 
-![Alt text](images/mysql_0.png?raw=true "mysql cli")
+![Alt text](images/mysql_0.png?raw=true "Mysql cli")
 
 + Execute the script **schema.sql** for create the DB.
 
