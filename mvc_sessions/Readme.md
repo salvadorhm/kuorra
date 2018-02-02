@@ -1,83 +1,77 @@
-# kuorra
+# Kuorra login
 
 ### Introduction
 
 Kuorra is a Web.py Microframework Frontend, use kuorra to create a MVC skeleton for work with Web.py, MySQL and Heroku App.
 
-### Funtions
+this template have the next functions
 
-+ Script for create a demo DB.
+### Functions
+
++ Script for create a **kuorra_login** DB
+  - *users table*
+  - *sessions table*
+  - *logs table*
+  - * **kuorra** user and **kuorra.2018** password*
 
 + Config one DB conection.
 
-+ Create a products **Controller**.
++ Create a **users Controller**.
 
   - *Index*
   - *View*
   - *Edit*
   - *Delete*
   - *Insert*
+  - *config*
+  - *printer*
+  - *change_pwd*
 
-+ Create a products **Model**.
++ Create a **main Controller**
 
-  - *get_all_products*
-  - *get_products*
-  - *delete_products*
-  - *insert_products*
-  - *edit_products*
+  - *index*
+  - *login*
+  - *logout*
+  - *config*
 
-+ Create a products **Views**:
++ Create a **logs Controller**
+ - *config*
+ - *index*
+ - *printer*
+ - *view*
 
-  - *Index*
-  - *View*
-  - *Edit*
-  - *Delete*
-  - *Insert*
-  - *Master* (Web Template)
++ Create a **Logs Model**
+ - *get_all_logs*
+ - *insert_logs*
 
-+ Create a products API.
++ Create a **users Model**
+ - *validate_user*
+ - *get_all_users*
+ - *get_users*
+ - *delete_users*
+ - *insert_users*
+ - *edit_users*
+ - *update_password*
 
-  - *GET all products* (GET)
-  - *GET one product* (GET id)
-  - *INSERT one product* (PUT id, fields)
-  - *DELETE one product* (DELETE id)
-  - *UPDATE one product* (UPDATE id, fields)
++ Create a **users View**
+ - *change_pwd*
+ - *delete*
+ - *edit*
+ - *index*
+ - *insert*
+ - *master*
+ - *printer*
+ - *view*
 
-7. Active a SSL connection
++ Create a **main View**
+ - *admin*
+ - *guess*
+ - *index*
+ - *login*
+ - *master*
 
-
-### Use
-
-+ Create new project
-
-  - **kuorra new project_name**
-
-+ Deploy project (into de project folder)
-
-  - **kuorra dep**
-
-+ Info
-  - **kuorra info**
-
-### Configuration
-
-+ The new project have a demo database  called **acme_store_mvc**, with a products table.
-
-+ The database script is written in the file **data + schema.sql**.
-
-+ Connect to MySQL server using *mysql cli*, *mysql workbench* or any other application and execute the script **schema.sql** for create the DB.
-
-+ In the file **application + models + model_products.py** modify the connection parameters
-
-  - **db_host** = 'localhost'
-  - **db_name** = 'acme_store_mvc'
-  - **db_user** = 'your user name'
-  - **db_pw** = 'your password'
-
-+ Into de folder where is the **app.py** file execute **kuorra dep** for deploy de WebApp.
-
-+ For stop de server press **Ctrl + C**.
-
-##### Author Salvador Hernández Mendoza
-##### Email salvadorhm@gmail.com
-##### Twitter @salvadorhm
++ Create a **logs View**
+ - *index*
+ - *master*
+ - *printer*
+ - *view*

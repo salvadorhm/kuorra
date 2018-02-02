@@ -16,7 +16,7 @@ class Api_table_name:
                 web.header('Content-Type', 'application/json')
                 return json.dumps(table_name_json)
             else:
-                # http://http://0.0.0.0:8080/api_table_name?user_hash=12345&action=get&primary_key=1
+                # http://0.0.0.0:8080/api_table_name?user_hash=12345&action=get&primary_key=1
                 result = config.model.get_table_name(int(primary_key))
                 table_name_json = []
                 table_name_json.append(dict(result))
@@ -28,7 +28,7 @@ class Api_table_name:
             web.header('Content-Type', 'application/json')
             return json.dumps(table_name_json)
 
-# https://0.0.0.0:8080/api_table_name?user_hash=12345&action=put&primary_key=1&product=nuevo&description=nueva&stock=10&purchase_price=1&price_sale=3&product_image=0
+# http://0.0.0.0:8080/api_table_name?user_hash=12345&action=put&primary_key=1&product=nuevo&description=nueva&stock=10&purchase_price=1&price_sale=3&product_image=0
     def put(self, fields):
         try:
             config.model.insert_table_name(fields)
@@ -39,7 +39,7 @@ class Api_table_name:
             print "PUT Error {}".format(e.args)
             return None
 
-# http://0.0.0.0:8080/api_table_name?user_hash=12345&action=get&primary_key=1
+# http://0.0.0.0:8080/api_table_name?user_hash=12345&action=delete&primary_key=1
     def delete(self, primary_key):
         try:
             config.model.delete_table_name(primary_key)

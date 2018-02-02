@@ -166,6 +166,8 @@ class View_generator:
                 insert += t
 
             insert = insert.replace('fields', plantilla)
+            insert = insert.replace('table_name', table_name)
+            insert = insert.replace('primary_key', primary_key)
 
 
             file = open(table_name + '/insert.html', 'w')

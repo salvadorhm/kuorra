@@ -1,3 +1,6 @@
+"""
+    File for config the tables models and use HMAC
+"""
 import web
 import hmac
 import application.models.model_users

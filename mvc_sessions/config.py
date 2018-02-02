@@ -2,8 +2,8 @@ import web
 
 db_host = 'localhost'
 db_name = 'kuorra_login'
-db_user = ''
-db_pw = ''
+db_user = 'kuorra'
+db_pw = 'kuorra.2018'
 
 db = web.database(
     dbn='mysql',

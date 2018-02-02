@@ -62,7 +62,7 @@ class Count:
         return str(session.count)
 
 
-def InternalError():
+def InternalError(): 
     raise config.web.seeother('/')
 
 
@@ -70,8 +70,9 @@ def NotFound():
     raise config.web.seeother('/')
 
 if __name__ == "__main__":
-    web.config.debug = False
-    web.config.db_printing = False
+    db.printing = False # hide db transactions
+    web.config.debug = False # hide debug print
+    web.config.db_printing = False # hide db transactions
     app.internalerror = InternalError
     app.notfound = NotFound
     app.run()

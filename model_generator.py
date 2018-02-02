@@ -6,8 +6,8 @@ class Model_generator:
 
     db_host = 'localhost'
     db_name = 'acme_store'
-    db_user = 'root'
-    db_pw = 'toor'
+    db_user = 'kuorra'
+    db_pw = 'kuorra.2018'
 
     table_name = ''
 

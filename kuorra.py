@@ -9,7 +9,7 @@ from view_generator import View_generator as view_generator
 from controller_generator import Controller_generator as controller_generator
 
 
-version = '0.7.2.0'
+version = '0.7.2.2'
 
 
 def new_base(args):

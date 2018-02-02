@@ -36,6 +36,9 @@ VALUES ('admin',MD5(concat('admin', 'kuorra_key')), 0, 1, 'Admin', 'admin@gmail.
 ('guess',MD5(concat('guess', 'kuorra_key')), 1, 1, 'Guess', 'guess@gmail.com','TIC:SI', MD5(concat('guess', 'kuorra_key','2016/06/04')), 0);
 
 
-
 SELECT * FROM users;
 SELECT * FROM sessions;
+
+CREATE USER 'kuorra'@'localhost' IDENTIFIED BY 'kuorra.2018';
+GRANT ALL PRIVILEGES ON kuorra_login.* TO 'kuorra'@'localhost';
+FLUSH PRIVILEGES;

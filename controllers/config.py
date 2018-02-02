@@ -9,7 +9,7 @@ secret_key = "kuorra_key"
 
 
 def hash_str(s):
-    return hmac.new(secret, s).hexdigest()
+    return hmac.new(secret_key, s).hexdigest()
 
 
 def make_secure_val(s):
