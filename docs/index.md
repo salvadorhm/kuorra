@@ -7,9 +7,9 @@ Kuorra es una herramienta que permite desarrollar rápidamente aplicaciones Web 
 
 Esta herramienta esta compuesta por 2 partes:
 
-    1. Kuorra Model basado en la arquitectura de 3 capas MVC (Model-View-Controller).
+  1. Kuorra Model basado en la arquitectura de 3 capas MVC (Model-View-Controller).
 
-    2. Kuorra CLI una herramienta de línea de comandos que permite generar la estructura completa de un proyecto nuevo.
+  2. Kuorra CLI una herramienta de línea de comandos que permite generar la estructura completa de un proyecto nuevo.
 
 En la Figura 1 se muestra la forma en que esta organizado el Kuorra Model para un proyecto WebApp que puede crecer manteniendo la misma estructura.
 ## Modélo Kuorra
