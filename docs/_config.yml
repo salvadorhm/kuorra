@@ -7,3 +7,5 @@ github: [metadata]
  jailed: false
  theme: jekyll-theme-slate
  gfm_quirks: paragraph_end 
+
+theme: jekyll-theme-cayman
