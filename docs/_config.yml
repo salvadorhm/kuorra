@@ -5,7 +5,5 @@ github: [metadata]
    hard_wrap: false
  future: true
  jailed: false
- theme: jekyll-theme-slate
+ theme: jekyll-theme-cayman
  gfm_quirks: paragraph_end 
-
-theme: jekyll-theme-cayman
