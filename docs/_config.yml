@@ -6,4 +6,4 @@ github: [metadata]
  future: true
  jailed: false
  theme: jekyll-theme-slate
- gfm_quirks: paragraph_end
+ gfm_quirks: paragraph_end 
