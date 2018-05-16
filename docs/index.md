@@ -16,3 +16,6 @@ En la Figura 1 se muestra la forma en que esta organizado el Kuorra Model para u
 
 ![Alt text](images/kuorra.png?raw=true "Modélo Kuorra")
 
+***
+
+[Siguiente](https://salvadorhm.github.io/kuorra/k01)
