@@ -22,4 +22,4 @@ En la Figura 1 se muestra la forma en que esta organizado el Kuorra Model para u
 ##### Author Salvador Hernández Mendoza
 ##### Email salvadorhm@gmail.com
 ##### Twitter @salvadorhm
-##### https://salvadorhm.github.io/kuorra/ [kuorra](https://salvadorhm.github.io/kuorra/)
+##### https://salvadorhm.github.io/kuorra/ 
