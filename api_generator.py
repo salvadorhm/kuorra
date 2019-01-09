@@ -9,7 +9,6 @@ class Api_generator:
     db_user = ''
     db_pw = ''
     db_port = ''
-
     table_name = ''
 
     db = web.database(
@@ -29,20 +28,21 @@ class Api_generator:
             db=self.db_name,
             user=self.db_user,
             pw=self.db_pw,
-            port=db_port
+            port=self.db_port
             )
             self.db = new_db
             print 'Conectado'
         except Exception as e:
+            print "Error 109: conexion {}".format(e.message)
             print e.args
-            print "Error en conexion {}".format(e.message)
+            
 
     def get_tables(self):
         try:
             return self.db.query('show tables')
         except Exception as e:
             print e.args
-            print "Error en get_tables {}".format(e.message)
+            print "Error 110: get_tables {}".format(e.message)
             return None
 
     def describre_tables(self, table):
@@ -51,7 +51,7 @@ class Api_generator:
             return self.db.query(sql, vars=locals())
         except Exception as e:
             print e.args
-            print "Error  describe_tables {}".format(e.message)
+            print "Error 111: describe_tables {}".format(e.message)
             return None
 
     def get_fields(self, table):
@@ -64,19 +64,24 @@ class Api_generator:
             return fields
         except Exception as e:
             print e.args
-            print "Error get_fields {}".format(e.message)
+            print "Error 112: get_fields {}".format(e.message)
             return None
 
     def get_primary_key(self, fields):
-        primary_key = ''
-        for field in fields:
-            try:
-                if field[1] == 'PRI':
-                    primary_key = field[0]
-                    exit
-            except:
-                primary_key = None
-        return primary_key
+        try:
+            primary_key = ''
+            for field in fields:
+                try:
+                    if field[1] == 'PRI':
+                        primary_key = field[0]
+                        exit
+                except:
+                    primary_key = None
+            return primary_key
+        except Exception as e:
+            print e.args
+            print "Error 113: get_fields {}".format(e.message)
+            return None
 
     def super_cool(self, table_name):
         try:
@@ -151,13 +156,13 @@ model = application.models.model_table_name
         except Exception as e:
             print e.args
             print e.message
-            print "Error en supercool {}".format(e.message)
+            print "Error 114: supercool {}".format(e.message)
 
     def new_folder(self, table_name):
         try:
             os.makedirs(table_name)
         except Exception as e:
-            print "ERROR create dir {}".format(e.message)
+            print "ERROR 115: create dir {}".format(e.message)
 
     def generate(self):
         try:
@@ -165,10 +170,10 @@ model = application.models.model_table_name
                 m = str(i.values())
                 self.super_cool(m[3:-2])
         except Exception as e:
-            print "Error en generate {}".format(e.message)
+            print "Error 116: generate {}".format(e.message)
 
     def generate_one(self, table_name):
         try:
             self.super_cool(table_name)
         except Exception as e:
-            print "Error al generar {}".format(e.message)
+            print "Error 117: al generar {}".format(e.message)

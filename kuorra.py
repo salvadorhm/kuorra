@@ -143,179 +143,210 @@ def deploy():
 
 
 def all_models(args):
-    name = args[2]
-    db_host = args[3]
-    db_name = name
-    db_user = args[4]
-    db_pw = args[5]
-    db_port = args[6]
+    try:
+        name = args[2]
+        db_host = args[3]
+        db_name = name
+        db_user = args[4]
+        db_pw = args[5]
+        db_port = args[6]
 
-    model = model_generator()
+        model = model_generator()
 
-    model.db_host = db_host
-    model.db_name = db_name
-    model.db_user = db_user
-    model.db_pw = db_pw
-    model.db_port = db_port
+        model.db_host = db_host
+        model.db_name = db_name
+        model.db_user = db_user
+        model.db_pw = db_pw
+        model.db_port = int(db_port)
 
-    model.table_name = name
+        model.table_name = name
 
-    model.conectar()
-    model.generate()
-
+        model.conectar()
+        model.generate()
+    except Exception as e:
+        print 'Error, 100'
+        print e.message
 
 def one_model(args):
-    name = args[2]
-    db_table = args[3]
-    db_host = args[4]
-    db_name = name
-    db_user = args[5]
-    db_pw = args[6]
-    db_port = args[7]
+    try:
+        name = args[2]
+        db_table = args[3]
+        db_host = args[4]
+        db_name = name
+        db_user = args[5]
+        db_pw = args[6]
+        db_port = args[7]
 
-    model = model_generator()
+        model = model_generator()
 
-    model.db_host = db_host
-    model.db_name = db_name
-    model.db_user = db_user
-    model.db_pw = db_pw
-    model.table_name = db_table
-    model.db_port = db_port
+        model.db_host = db_host
+        model.db_name = db_name
+        model.db_user = db_user
+        model.db_pw = db_pw
+        model.table_name = db_table
+        model.db_port = int(db_port)
 
-    model.conectar()
-    model.generate_one(db_table)
+        model.conectar()
+        model.generate_one(db_table)
+    except Exception as e:
+        print 'Error, 101'
+        print e.message
 
 
 def all_apis(args):
-    name = args[2]
-    db_host = args[3]
-    db_name = name
-    db_user = args[4]
-    db_pw = args[5]
-    db_port = args[6]
+    try:
+        name = args[2]
+        db_host = args[3]
+        db_name = name
+        db_user = args[4]
+        db_pw = args[5]
+        db_port = args[6]
 
-    api = api_generator()
+        api = api_generator()
 
-    api.db_host = db_host
-    api.db_name = db_name
-    api.db_user = db_user
-    api.db_pw = db_pw
-    api.db_port = db_port
+        api.db_host = db_host
+        api.db_name = db_name
+        api.db_user = db_user
+        api.db_pw = db_pw
+        api.db_port = dint(db_port)
 
-    api.table_name = name
+        api.table_name = name
 
-    api.conectar()
-    api.generate()
+        api.conectar()
+        api.generate()
+    except Exception as e:
+        print 'Error, 102'
+        print e.message
 
 
 def one_api(args):
-    name = args[2]
-    db_table = args[3]
-    db_host = args[4]
-    db_name = name
-    db_user = args[5]
-    db_pw = args[6]
-    db_port = args[7]
+    try:
+        name = args[2]
+        db_table = args[3]
+        db_host = args[4]
+        db_name = name
+        db_user = args[5]
+        db_pw = args[6]
+        db_port = args[7]
 
-    api = api_generator()
+        api = api_generator()
 
-    api.db_host = db_host
-    api.db_name = db_name
-    api.db_user = db_user
-    api.db_pw = db_pw
-    api.table_name = db_table
-    api.db_port = db_port
+        api.db_host = db_host
+        api.db_name = db_name
+        api.db_user = db_user
+        api.db_pw = db_pw
+        api.table_name = db_table
+        api.db_port = int(db_port)
 
-    api.conectar()
-    api.generate_one(db_table)
+        api.conectar()
+        api.generate_one(db_table)
+    except Exception as e:
+        print 'Error, 103'
+        print e.message
 
 
 def all_views(args):
-    name = args[2]
-    db_host = args[3]
-    db_name = name
-    db_user = args[4]
-    db_pw = args[5]
-    db_port = args[6]
+    try:
+        name = args[2]
+        db_host = args[3]
+        db_name = name
+        db_user = args[4]
+        db_pw = args[5]
+        db_port = args[6]
 
-    view = view_generator()
+        view = view_generator()
 
-    view.db_host = db_host
-    view.db_name = db_name
-    view.db_user = db_user
-    view.db_pw = db_pw
-    view.db_port = db_port
+        view.db_host = db_host
+        view.db_name = db_name
+        view.db_user = db_user
+        view.db_pw = db_pw
+        view.db_port = int(db_port)
 
-    view.table_name = name
+        view.table_name = name
 
-    view.conectar()
-    view.generate()
+        view.conectar()
+        view.generate()
+    except Exception as e:
+        print 'Error, 104'
+        print e.message
 
 
 def one_view(args):
-    name = args[2]
-    db_table = args[3]
-    db_host = args[4]
-    db_name = name
-    db_user = args[5]
-    db_pw = args[6]
-    db_port = args[7]
+    try:
+        name = args[2]
+        db_table = args[3]
+        db_host = args[4]
+        db_name = name
+        db_user = args[5]
+        db_pw = args[6]
+        db_port = args[7]
 
-    view = view_generator()
+        view = view_generator()
 
-    view.db_host = db_host
-    view.db_name = db_name
-    view.db_user = db_user
-    view.db_pw = db_pw
-    view.table_name = db_table
-    view.db_port = db_port
+        view.db_host = db_host
+        view.db_name = db_name
+        view.db_user = db_user
+        view.db_pw = db_pw
+        view.table_name = db_table
+        view.db_port = int(db_port)
 
-    view.conectar()
-    view.generate_one(db_table)
+        view.conectar()
+        view.generate_one(db_table)
+    except Exception as e:
+        print 'Error, 105'
+        print e.message
 
 
 def all_controllers(args):
-    name = args[2]
-    db_host = args[3]
-    db_name = name
-    db_user = args[4]
-    db_pw = args[5]
-    db_port = args[6]
+    try:
+        name = args[2]
+        db_host = args[3]
+        db_name = name
+        db_user = args[4]
+        db_pw = args[5]
+        db_port = args[6]
 
-    controller = controller_generator()
+        controller = controller_generator()
 
-    controller.db_host = db_host
-    controller.db_name = db_name
-    controller.db_user = db_user
-    controller.db_pw = db_pw
-    controller.db_port = db_port
+        controller.db_host = db_host
+        controller.db_name = db_name
+        controller.db_user = db_user
+        controller.db_pw = db_pw
+        controller.db_port = int(db_port)
 
-    controller.table_name = name
+        controller.table_name = name
 
-    controller.conectar()
-    controller.generate()
+        controller.conectar()
+        controller.generate()
+    except Exception as e:
+        print 'Error, 106'
+        print e.message
 
 
 def one_controller(args):
-    name = args[2]
-    db_table = args[3]
-    db_host = args[4]
-    db_name = name
-    db_user = args[5]
-    db_pw = args[6]
-    db_port = args[7]
+    try:
+        name = args[2]
+        db_table = args[3]
+        db_host = args[4]
+        db_name = name
+        db_user = args[5]
+        db_pw = args[6]
+        db_port = args[7]
 
-    controller = controller_generator()
+        controller = controller_generator()
 
-    controller.db_host = db_host
-    controller.db_name = db_name
-    controller.db_user = db_user
-    controller.db_pw = db_pw
-    controller.table_name = db_table
-    controller.db_port = db_port
+        controller.db_host = db_host
+        controller.db_name = db_name
+        controller.db_user = db_user
+        controller.db_pw = db_pw
+        controller.table_name = db_table
+        controller.db_port = int(db_port)
 
-    controller.conectar()
-    controller.generate_one(db_table)
+        controller.conectar()
+        controller.generate_one(db_table)
+    except Exception as e:
+        print 'Error, 107'
+        print e.message
 
 
 def main():
@@ -356,7 +387,7 @@ def main():
         else:
             help()
     except Exception as e:
-        print 'Error, use -h for help'
+        print 'Error, 108'
         print e.message
 
 if __name__ == "__main__":

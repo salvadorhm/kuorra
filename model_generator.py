@@ -29,7 +29,7 @@ class Model_generator:
             db=self.db_name,
             user=self.db_user,
             pw=self.db_pw,
-            port=db_port
+            port=self.db_port
             )
             self.db = new_db
             print 'Conectado'
