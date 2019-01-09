@@ -31,7 +31,7 @@ class Api_generator:
             port=self.db_port
             )
             self.db = new_db
-            print 'Conectado'
+            print 'Conectando...'
         except Exception as e:
             print "Error 109: conexion {}".format(e.message)
             print e.args

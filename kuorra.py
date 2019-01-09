@@ -384,8 +384,6 @@ def main():
             all_controllers(sys.argv)
         elif command == 'controller' or command == '-c':
             one_controller(sys.argv)
-        else:
-            help()
     except Exception as e:
         print 'Error, 108'
         print e.message
