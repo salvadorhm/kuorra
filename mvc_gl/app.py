@@ -30,13 +30,13 @@ urls = urls.urls
 # GOOGLE API OAUTH2
 
 # Google API Token localhost
-app_id = '814018521933-07o6r8b9b04e75or716juctjc7c84gb9.apps.googleusercontent.com'
-app_secret = 'Uo7iaZ0LAAGw3qmp_EXhRXDI'
+app_id = '914018521933-07o6r8b9b04e75or716juctjc7c84gb9.apps.googleusercontent.com'
+app_secret = 'Vo7iaZ0LAAGw3qmp_EXhRXDI'
 
 '''
 # Google API Token salvadorhm.ddns.net
-app_id = '709660183186-mk54ns1ntn21ctg4q7meralasg9j2qco.apps.googleusercontent.com'
-app_secret = 'FiLhIcXesVP-qS8c7lrU4KL8'
+app_id = '809660183186-mk54ns1ntn21ctg4q7meralasg9j2qco.apps.googleusercontent.com'
+app_secret = 'GiLhIcXesVP-qS8c7lrU4KL8'
 '''
 
 
