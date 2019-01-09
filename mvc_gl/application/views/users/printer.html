@@ -1,0 +1,39 @@
+$def with(users)
+<h3>
+    <a href="/users">Users</a>
+</h3>
+<table id="datos_imprimir" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>No.</th>
+        <th>User name</th>
+        <th>User</th>
+        <th>Status</th>
+        <th>Privilege</th>
+        <th>Updated</th>
+    </thead>
+    <tbody>
+            $ i = 1
+        $for item in users:
+        
+              
+        <tr>
+            <td>$i</td>            
+            $ i = i + 1
+            <td><a href='/users/view/$item.user'>$item.username</a></td>
+            <td><a href='/users/view/$item.user'>$item.user.split('!')[0]</a></td>
+            $if item.status == 0:
+                <td>Disabled</td>
+            $else:
+                <td>Enabled</td>
+
+            $if item.privilege == 0:
+                <td>Admin</td>
+            $else:
+                <td>Guess</td>
+   
+            <td>$item.created</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

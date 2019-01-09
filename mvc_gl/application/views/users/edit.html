@@ -1,0 +1,86 @@
+$def with(users, message)
+<h3>
+    <a href="/users">Users</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Warning </strong> $message
+    </div>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="user" id="user" value="$users.user" />
+
+    <div class="form-group">
+        <label>User</label>
+        <input readonly id="un" type="text" class="form-control" name="un" size="30" value="$users.user.split('!')[0]"/>
+    </div>
+
+    <div class="form-group">
+        <label>User Name</label>
+        <input required id="username" type="text" class="form-control" name="username" size="30" value="$users.username"/>
+    </div>
+
+    <div class="form-group">
+        <label>Privilege</label>
+        $if users.privilege == 0:
+             <div class="radio">
+                <label><input type="radio" name="privilege" value=0 checked>Admin</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="privilege" value=1>Guess</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="privilege" value=0>Admin</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="privilege" value=1 checked>Guess</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        $if users.status == 0:
+             <div class="radio">
+                <label><input type="radio" name="status" value=0 checked>Disabled</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="status" value=1>Enabled</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="status" value=0>Disabled</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="status" value=1 checked>Enabled</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label>email</label>
+        <input required id="email" type="email" class="form-control" name="email" size="30" value="$users.email"/>
+    </div>
+
+    <div class="form-group">
+        <label>Other</label>
+        <input required id="other_data" type="text" class="form-control" name="other_data" size="30" value="$users.other_data"/>
+    </div>
+
+    <div class="form-group">
+        <label>Userhash</label>
+        <input readonly id="user_hash" type="text" class="form-control" name="user_hash" size="32" value="$users.user_hash"/>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span>  Edit</button>
+    </div>
+
+
+</form>
+
+<br>
+<br>
+<br>

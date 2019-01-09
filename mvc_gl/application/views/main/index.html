@@ -1,0 +1,11 @@
+$def with(params, message)
+$var user: $params['user']
+$var privilege: $params['privilege']
+$var picture: $params['picture']
+<br>
+<br>
+
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>

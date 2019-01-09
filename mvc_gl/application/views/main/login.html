@@ -1,0 +1,16 @@
+$def with(message)
+$var privilege: -1
+
+<h1>Login</h1>
+$if message != None:
+    <div class="alert alert-danger">
+	<strong>Error:</strong> $message
+    </div>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+            <label></label>
+            
+            <input type="button" value="Login with Google" onclick="window.location.href='/login'" class="form-control"></button>
+    </div>
+</form>
