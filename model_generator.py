@@ -4,10 +4,11 @@ import os
 
 class Model_generator:
 
-    db_host = 'localhost'
-    db_name = 'acme_store'
-    db_user = 'kuorra'
-    db_pw = 'kuorra.2018'
+    db_host = ''
+    db_name = ''
+    db_user = ''
+    db_pw = ''
+    db_port = ''
 
     table_name = ''
 
@@ -16,7 +17,8 @@ class Model_generator:
             host=db_host,
             db=db_name,
             user=db_user,
-            pw=db_pw
+            pw=db_pw,
+            port=db_port
             )
 
     def conectar(self):
@@ -26,7 +28,8 @@ class Model_generator:
             host=self.db_host,
             db=self.db_name,
             user=self.db_user,
-            pw=self.db_pw
+            pw=self.db_pw,
+            port=db_port
             )
             self.db = new_db
             print 'Conectado'

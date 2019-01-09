@@ -9,7 +9,7 @@ from view_generator import View_generator as view_generator
 from controller_generator import Controller_generator as controller_generator
 
 
-version = '0.7.2.2'
+version = '0.7.3.0'
 
 
 def new_base(args):
@@ -24,6 +24,17 @@ def new_base(args):
     copyanything(abs_file_path, name)
     print 'Project created succesful'
 
+def new_mvc_gl(args):
+    name = args[2]
+    print 'Creating new project ....'
+    print 'Project: {}'.format(name)
+    script_path = os.path.abspath(__file__)
+    script_dir = os.path.split(script_path)[0]
+    rel_path = "mvc_gl"
+    abs_file_path = os.path.join(script_dir, rel_path)
+    #call(['ls -l'], shell = True)
+    copyanything(abs_file_path, name)
+    print 'Project created succesful'
 
 def new_login(args):
     name = args[2]
@@ -82,16 +93,18 @@ def info():
 
 
 def help():
-    print 'kuorra V {}'.format(version)
     print ''
     print 'HELP'
+    print ''
+    print 'kuorra V {}'.format(version)
     print ''
     print 'project_name \t- Project name'
     print 'host \t- Database host'
     print 'db \t- Database name'
     print 'user \t- Database user'
-    print 'pw \t- Database password'
+    print 'password- Database password'
     print 'table \t- Database table name'
+    print 'port \t- Database port number'
     print ''
     print 'COMMANDS'
     print ''
@@ -99,16 +112,17 @@ def help():
     print 'kuorra -nb project_name -> NEW BLANK PROJECT'
     print 'kuorra -nf project_name -> NEW WEB.PY FORMS USE'
     print 'kuorra -nl project_name -> NEW WEB.PY LOGIN PROJECT'
+    print 'kuorra -ngl project_name -> NEW WEB.PY GOOGLE LOGIN PROJECT'
     print 'kuorra -d -> DEPLOY PROJECT'
     print 'kuorra -i -> INFORMATION'
-    print 'kuorra -am db host user pw -> CREATE ALL TABLES MODELS'
-    print 'kuorra -m db table host user pw -> CREATE ONE TABLE MODEL'
-    print 'kuorra -aa db host user pw -> CREATE ALL TABLES API'
-    print 'kuorra -a db table host user pw -> CREATE ONE TABLE API'
-    print 'kuorra -av db host user pw -> CREATE ALL TABLES VIEWS'
-    print 'kuorra -v db table host user pw -> CREATE ONE TABLE VIEW'
-    print 'kuorra -ac db host user pw -> CREATE ALL TABLES CONROLLERS'
-    print 'kuorra -c db table host user pw -> CREATE ONE TABLE CONTROLLER'
+    print 'kuorra -am db host user password port-> CREATE ALL TABLES MODELS'
+    print 'kuorra -m db table host user password port-> CREATE ONE TABLE MODEL'
+    print 'kuorra -aa db host user password port-> CREATE ALL TABLES API'
+    print 'kuorra -a db table host user password port-> CREATE ONE TABLE API'
+    print 'kuorra -av db host user password port-> CREATE ALL TABLES VIEWS'
+    print 'kuorra -v db table host user password port-> CREATE ONE TABLE VIEW'
+    print 'kuorra -ac db host user password port-> CREATE ALL TABLES CONROLLERS'
+    print 'kuorra -c db table host user password port-> CREATE ONE TABLE CONTROLLER'
     print ''
 
 
@@ -134,6 +148,7 @@ def all_models(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     model = model_generator()
 
@@ -141,6 +156,7 @@ def all_models(args):
     model.db_name = db_name
     model.db_user = db_user
     model.db_pw = db_pw
+    model.db_port = db_port
 
     model.table_name = name
 
@@ -155,6 +171,7 @@ def one_model(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     model = model_generator()
 
@@ -163,6 +180,7 @@ def one_model(args):
     model.db_user = db_user
     model.db_pw = db_pw
     model.table_name = db_table
+    model.db_port = db_port
 
     model.conectar()
     model.generate_one(db_table)
@@ -174,6 +192,7 @@ def all_apis(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     api = api_generator()
 
@@ -181,6 +200,7 @@ def all_apis(args):
     api.db_name = db_name
     api.db_user = db_user
     api.db_pw = db_pw
+    api.db_port = db_port
 
     api.table_name = name
 
@@ -195,6 +215,7 @@ def one_api(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     api = api_generator()
 
@@ -203,6 +224,7 @@ def one_api(args):
     api.db_user = db_user
     api.db_pw = db_pw
     api.table_name = db_table
+    api.db_port = db_port
 
     api.conectar()
     api.generate_one(db_table)
@@ -214,6 +236,7 @@ def all_views(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     view = view_generator()
 
@@ -221,6 +244,7 @@ def all_views(args):
     view.db_name = db_name
     view.db_user = db_user
     view.db_pw = db_pw
+    view.db_port = db_port
 
     view.table_name = name
 
@@ -235,6 +259,7 @@ def one_view(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     view = view_generator()
 
@@ -243,6 +268,7 @@ def one_view(args):
     view.db_user = db_user
     view.db_pw = db_pw
     view.table_name = db_table
+    view.db_port = db_port
 
     view.conectar()
     view.generate_one(db_table)
@@ -254,6 +280,7 @@ def all_controllers(args):
     db_name = name
     db_user = args[4]
     db_pw = args[5]
+    db_port = args[6]
 
     controller = controller_generator()
 
@@ -261,6 +288,7 @@ def all_controllers(args):
     controller.db_name = db_name
     controller.db_user = db_user
     controller.db_pw = db_pw
+    controller.db_port = db_port
 
     controller.table_name = name
 
@@ -275,6 +303,7 @@ def one_controller(args):
     db_name = name
     db_user = args[5]
     db_pw = args[6]
+    db_port = args[7]
 
     controller = controller_generator()
 
@@ -283,6 +312,7 @@ def one_controller(args):
     controller.db_user = db_user
     controller.db_pw = db_pw
     controller.table_name = db_table
+    controller.db_port = db_port
 
     controller.conectar()
     controller.generate_one(db_table)
@@ -299,6 +329,8 @@ def main():
             new_forms(sys.argv)
         elif command == 'new_login' or command == '-nl':
             new_login(sys.argv)
+        elif command == 'new_google_login' or command == '-ngl':
+            new_mvc_gl(sys.argv)
         elif command == 'info' or command == '-i':
             info()
         elif command == 'dep' or command == '-d':

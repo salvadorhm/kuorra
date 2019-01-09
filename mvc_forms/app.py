@@ -1,6 +1,8 @@
-#Author : Salvador Hernandez Mendoza
-#Email  : salvadorhm@gmail.com
-#Twitter: @salvadorhm
+# Author : Salvador Hernandez Mendoza
+# Email  : salvadorhm@gmail.com
+# Twitter: @salvadorhm
+# kuorra version: 0.7.3.0
+# Created       : 09/Ene/2019
 import web
 import application
 
